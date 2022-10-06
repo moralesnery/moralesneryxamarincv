@@ -1,0 +1,69 @@
+{
+  "runtimeTarget": {
+    "name": ".NETStandard,Version=v2.1/",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETStandard,Version=v2.1": {},
+    ".NETStandard,Version=v2.1/": {
+      "moralesneryxamarincv/1.0.0": {
+        "dependencies": {
+          "Xamarin.CommunityToolkit": "2.0.5",
+          "Xamarin.Forms": "5.0.0.2515"
+        },
+        "runtime": {
+          "moralesneryxamarincv.dll": {}
+        }
+      },
+      "Xamarin.CommunityToolkit/2.0.5": {
+        "dependencies": {
+          "Xamarin.Forms": "5.0.0.2515"
+        },
+        "runtime": {
+          "lib/netstandard2.1/Xamarin.CommunityToolkit.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Xamarin.Forms/5.0.0.2515": {
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.Forms.Core.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "5.0.0.946"
+          },
+          "lib/netstandard2.0/Xamarin.Forms.Platform.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "5.0.0.946"
+          },
+          "lib/netstandard2.0/Xamarin.Forms.Xaml.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "5.0.0.946"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "moralesneryxamarincv/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Xamarin.CommunityToolkit/2.0.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8oFY5ZrKoIOCqtTeRh+jx5TAcs177TU0pEoefMWRptrq+TZoKwsPNg7L8lBtLSP+2ymg4VBn8i/6chA6b4mGdQ==",
+      "path": "xamarin.communitytoolkit/2.0.5",
+      "hashPath": "xamarin.communitytoolkit.2.0.5.nupkg.sha512"
+    },
+    "Xamarin.Forms/5.0.0.2515": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-n/Y/xk1idWRkxk7xItwvNwwda7CHpIk7JxD6tXkGXmTqiVGV1xRkepf5aKXFkQLM9KIQhXXYBxPsdyJysPpktw==",
+      "path": "xamarin.forms/5.0.0.2515",
+      "hashPath": "xamarin.forms.5.0.0.2515.nupkg.sha512"
+    }
+  }
+}

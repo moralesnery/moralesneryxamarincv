@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "dgSpecHash": "XeadpMMmY6s9V4i5I8cOME0Lom1kg3PdVZDh/ecmas7cKFbsFUjnKiy6cOH+lHKffA3HdcHvZr8feWRrIHUbfA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\amorales\\source\\repos\\moralesneryxamarincv\\moralesneryxamarincv.iOS\\moralesneryxamarincv.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\amorales\\.nuget\\packages\\xamarin.communitytoolkit\\2.0.5\\xamarin.communitytoolkit.2.0.5.nupkg.sha512",
+    "C:\\Users\\amorales\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Degradación del paquete detectada: Xamarin.Forms de 5.0.0.2515 a 5.0.0.2196. Haga referencia al paquete directamente desde el proyecto para seleccionar una versión diferente. \r\n moralesneryxamarincv.iOS -> moralesneryxamarincv -> Xamarin.Forms (>= 5.0.0.2515) \r\n moralesneryxamarincv.iOS -> Xamarin.Forms (>= 5.0.0.2196)",
+      "libraryId": "Xamarin.Forms",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    }
+  ]
+}

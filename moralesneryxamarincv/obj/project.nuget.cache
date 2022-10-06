@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "otFIIBECo4VcIJgI++uLONSsYxhWRraokiEfwHMEqTLBnUtxTLf9DKUsgZl1G2Nwf2EmEZ5H40pIt4CSFU9oaw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\amorales\\source\\repos\\moralesneryxamarincv\\moralesneryxamarincv\\moralesneryxamarincv.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\amorales\\.nuget\\packages\\xamarin.communitytoolkit\\2.0.5\\xamarin.communitytoolkit.2.0.5.nupkg.sha512",
+    "C:\\Users\\amorales\\.nuget\\packages\\xamarin.forms\\5.0.0.2515\\xamarin.forms.5.0.0.2515.nupkg.sha512"
+  ],
+  "logs": []
+}

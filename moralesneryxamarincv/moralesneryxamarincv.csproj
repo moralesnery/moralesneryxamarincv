@@ -1,0 +1,56 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Fonts\Lato-Black.ttf" />
+    <None Remove="Fonts\Lato-BlackItalic.ttf" />
+    <None Remove="Fonts\Lato-Bold.ttf" />
+    <None Remove="Fonts\Lato-BoldItalic.ttf" />
+    <None Remove="Fonts\Lato-Italic.ttf" />
+    <None Remove="Fonts\Lato-Light.ttf" />
+    <None Remove="Fonts\Lato-LightItalic.ttf" />
+    <None Remove="Fonts\Lato-Regular.ttf" />
+    <None Remove="Fonts\Lato-Thin.ttf" />
+    <None Remove="Fonts\Lato-ThinItalic.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Fonts\Lato-Black.ttf" />
+    <EmbeddedResource Include="Fonts\Lato-BlackItalic.ttf" />
+    <EmbeddedResource Include="Fonts\Lato-Bold.ttf" />
+    <EmbeddedResource Include="Fonts\Lato-BoldItalic.ttf" />
+    <EmbeddedResource Include="Fonts\Lato-Italic.ttf" />
+    <EmbeddedResource Include="Fonts\Lato-Light.ttf" />
+    <EmbeddedResource Include="Fonts\Lato-LightItalic.ttf" />
+    <EmbeddedResource Include="Fonts\Lato-Regular.ttf" />
+    <EmbeddedResource Include="Fonts\Lato-Thin.ttf" />
+    <EmbeddedResource Include="Fonts\Lato-ThinItalic.ttf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.CommunityToolkit" Version="2.0.5" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2515" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Home.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Conocimientos.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Contacto.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\CV.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Experiencia.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
