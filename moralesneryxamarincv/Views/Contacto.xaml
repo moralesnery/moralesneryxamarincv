@@ -1,12 +1,59 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="moralesneryxamarincv.Views.Contacto">
+             x:Class="moralesneryxamarincv.Views.Contacto"
+             NavigationPage.HasNavigationBar="True"
+             Title="Contacto">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ScrollView Padding="20">
+            <StackLayout>
+                
+                <!-- Correo electrónico -->
+                <StackLayout Margin="0,20,0,0">
+                    <Label x:Name="lbl_mail" Text="Correo Electrónico:" FontSize="Large" FontFamily="LatoBold" TextColor="Black"></Label>
+                    <Label Text="moralesnery@yahoo.com.mx" TextColor="Blue" FontFamily="LatoBold" FontSize="Medium" HorizontalTextAlignment="Start" VerticalTextAlignment="Start">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="btnMailto_Clicked"></TapGestureRecognizer>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+
+                <!-- Teléfono -->
+                <StackLayout Margin="0,20,0,0">
+                    <Label x:Name="lbl_phone" Text="Telefono:" FontSize="Large" FontFamily="LatoBold" TextColor="Black"></Label>
+                    <Label Text="+52 2291 53 76 19" TextColor="Green"  FontSize="Title" FontFamily="LatoBold" HorizontalTextAlignment="Start" VerticalTextAlignment="Start">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="btnLlamar_Tapped"></TapGestureRecognizer>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+
+                <BoxView Margin="0,20,0,10" HeightRequest="1" BackgroundColor="DarkGray"></BoxView>
+
+                <!-- Redes -->
+                <Label x:Name="lbl_links" FontSize="Large" FontFamily="LatoBold" TextColor="Black" Margin="0,0,0,10" Text="Enlaces:"></Label>
+                
+                <StackLayout Orientation="Horizontal" x:Name="btnGitHub" Margin="0,10,0,0">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="btnEnlace_Tapped"></TapGestureRecognizer>
+                    </StackLayout.GestureRecognizers>
+                    <Image Source="github.png" WidthRequest="96" Aspect="AspectFit" BackgroundColor="Transparent"></Image>
+                    <Label FontSize="Large" Text="GitHub" VerticalTextAlignment="Center" TextColor="Black" FontFamily="LatoBold"></Label>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" x:Name="btnLinkedIn" Margin="0,10,0,0">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="btnEnlace_Tapped"></TapGestureRecognizer>
+                    </StackLayout.GestureRecognizers>
+                    <Image Source="linkedin.png" WidthRequest="96" Aspect="AspectFit" Scale="0.8" BackgroundColor="Transparent"></Image>
+                    <Label FontSize="Large" Text="LinkedIn" VerticalTextAlignment="Center" TextColor="Black" FontFamily="LatoBold"></Label>
+                </StackLayout>
+
+                <!-- Teléfono -->
+                
+                
+            </StackLayout>
+        </ScrollView>
+        
     </ContentPage.Content>
 </ContentPage>

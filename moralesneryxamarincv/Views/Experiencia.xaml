@@ -1,12 +1,56 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="moralesneryxamarincv.Views.Experiencia">
+             x:Class="moralesneryxamarincv.Views.Experiencia"
+             NavigationPage.HasNavigationBar="True" Title="Experiencia laboral">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        
+        <ScrollView>
+            <StackLayout Padding="20">
+                
+                <StackLayout.Background>
+                    <LinearGradientBrush EndPoint="0,1">
+                        <GradientStop Color="White" Offset="0.75" />
+                        <GradientStop Color="{StaticResource Primary}" Offset="1.0" />
+                    </LinearGradientBrush>
+                </StackLayout.Background>
+
+                <ListView x:Name="timelineListView" SelectionMode="None" ItemTapped="timelineListView_ItemTapped" RowHeight="75" SeparatorVisibility="None" VerticalOptions="FillAndExpand">
+                    <ListView.Header>
+                        <StackLayout>
+                            <Label Text="Experiencia laboral" FontSize="Large" FontAttributes="Bold" FontFamily="LatoBold" TextColor="Black" />
+                            <Label Text="Toca un elemento para ver su detalle" Margin="0,0,0,30" FontSize="Medium" FontAttributes="Bold" FontFamily="LatoBold" TextColor="DarkGray"  />
+                        </StackLayout>
+                    </ListView.Header>
+
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid ColumnSpacing="0" RowSpacing="0">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="128" />
+                                        <ColumnDefinition Width="30" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+
+                                    <Label HorizontalOptions="Start" Text="{Binding Periodo}" FontFamily="LatoBold" FontSize="16" TextColor="DarkRed" />
+                                    <Label Grid.Column="2" Margin="0,0" Text="{Binding Lugar}" FontFamily="LatoBold" FontSize="16" TextColor="Black" />
+                                    <Label Grid.Row="1" Grid.Column="2" Margin="10,0" Text="{Binding Direccion}" FontFamily="LatoBold" FontSize="16" />
+                                    <BoxView Grid.RowSpan="2" Grid.Column="1" BackgroundColor="DarkGray" HorizontalOptions="Center" IsVisible="{Binding NoUltimo}" VerticalOptions="Fill" WidthRequest="3" />
+                                    <Image Grid.Column="1" Source="Bullet.png" />
+
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+
+                </ListView>
+            </StackLayout>
+        </ScrollView>
+        
     </ContentPage.Content>
 </ContentPage>

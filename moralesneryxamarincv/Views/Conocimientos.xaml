@@ -1,12 +1,130 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="moralesneryxamarincv.Views.Conocimientos">
+             x:Class="moralesneryxamarincv.Views.Conocimientos"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             NavigationPage.HasNavigationBar="True" Title="Conocimientos y Aptitudes">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ScrollView Padding="20">
+            <StackLayout>
+                
+                <!-- Productos -->
+                <xct:Expander Margin="0,10,0,10" x:Name="panel1">
+                    <xct:Expander.Header>
+                        <Label x:Name="lbl_software_dev" Text="Desarrollo de software" FontAttributes="Bold" FontSize="Large" TextColor="Black" FontFamily="LatoBold" />
+                    </xct:Expander.Header>
+
+                    <!--
+                    <Grid Margin="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="64"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Image Grid.Row="0" Grid.Column="0" VerticalOptions="Center" Source="formacion_1.jpg" Aspect="AspectFit" WidthRequest="96" />
+                        <Label Grid.Row="0" Grid.Column="1" VerticalTextAlignment="Center" Text="Aplicaciones y sitios web" FontSize="Medium" TextColor="#343434" FontFamily="Lato"/>
+                    </Grid>
+                    -->
+                    <StackLayout VerticalOptions="StartAndExpand" Margin="0,15,0,0">
+
+                        <ListView x:Name="listaProductos" HasUnevenRows="True" SeparatorVisibility="None" SelectionMode="None" HeightRequest="320">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+
+                                        <Grid Margin="5" VerticalOptions="Start">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="64"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"></RowDefinition>
+                                            </Grid.RowDefinitions>
+                                            <!--<Image Grid.Row="0" Grid.Column="0" VerticalOptions="Center" Source="formacion_1.jpg" Aspect="AspectFit" WidthRequest="96" />-->
+                                            <Label Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" Text="{Binding indicador}" FontSize="Medium" TextColor="DarkGray" FontFamily="Lato"/>
+                                            <Label Grid.Row="0" Grid.Column="1" VerticalTextAlignment="Center" Text="{Binding descripcion}" FontSize="Medium" TextColor="#343434" FontFamily="Lato"/>
+                                        </Grid>
+
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                        
+                        <Grid Padding="0">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="64"></RowDefinition>
+                                <RowDefinition Height="96"></RowDefinition>
+                                <RowDefinition Height="96"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+
+                            <Image Grid.Row="0" Grid.Column="0" Source="dotnet" Aspect="AspectFit" HorizontalOptions="Center" VerticalOptions="Start"></Image>
+                            <Image Grid.Row="0" Grid.Column="1" Source="java" Aspect="AspectFit" HorizontalOptions="Center" VerticalOptions="Start"></Image>
+                            <Image Grid.Row="0" Grid.Column="2" Source="python" Aspect="AspectFit" HorizontalOptions="Center" VerticalOptions="Start"></Image>
+                            
+                            <Image Grid.Row="1" Grid.Column="0" Source="javascript" Aspect="AspectFit" HorizontalOptions="Center" VerticalOptions="Start"></Image>
+                            <Image Grid.Row="1" Grid.Column="1" Source="css" Aspect="AspectFit" HorizontalOptions="Center" VerticalOptions="Start"></Image>
+                            <Image Grid.Row="1" Grid.Column="2" Source="html5" Aspect="AspectFit" HorizontalOptions="Center" VerticalOptions="Start"></Image>
+                            <!--<Label Grid.Row="3" Grid.Column="0" Text="Javascript" FontSize="Medium" TextColor="Black" FontFamily="LatoBold" HorizontalOptions="Center" VerticalOptions="Start"></Label>
+                            <Label Grid.Row="3" Grid.Column="1" Text="HTML5" FontSize="Medium" TextColor="Black" FontFamily="LatoBold" HorizontalOptions="Center" VerticalOptions="Start"></Label>
+                            <Label Grid.Row="3" Grid.Column="2" Text="Dart" FontSize="Medium" TextColor="Black" FontFamily="LatoBold" HorizontalOptions="Center" VerticalOptions="Start"></Label>-->
+                            <Image Grid.Row="2" Grid.Column="0" Source="php" Aspect="AspectFit" HorizontalOptions="Center" VerticalOptions="Start"></Image>
+                            <Image Grid.Row="2" Grid.Column="1" Source="bootstrap" Aspect="AspectFit" HorizontalOptions="Center" VerticalOptions="Start"></Image>
+                            <Image Grid.Row="2" Grid.Column="2" Source="xamarin" Aspect="AspectFit" HorizontalOptions="Center" VerticalOptions="Start"></Image>
+                            
+
+                        </Grid>
+
+                    </StackLayout>
+
+                </xct:Expander>
+                
+                
+                <!-- Analisis -->
+                <xct:Expander Margin="0,10,0,10" x:Name="panel2">
+                    <xct:Expander.Header>
+                        <Label x:Name="lbl_analysis" Text="Analisis" FontAttributes="Bold" FontSize="Large" TextColor="Black" FontFamily="LatoBold" />
+                    </xct:Expander.Header>
+                    <StackLayout VerticalOptions="StartAndExpand">
+
+                        <ListView x:Name="listaProductos2" HasUnevenRows="True" SelectionMode="None" HeightRequest="320" SeparatorVisibility="None">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+
+                                        <Grid Margin="5" VerticalOptions="Start">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="64"/>
+                                                <ColumnDefinition Width="*"/>
+                                            </Grid.ColumnDefinitions>
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="Auto"></RowDefinition>
+                                            </Grid.RowDefinitions>
+                                            <!--<Image Grid.Row="0" Grid.Column="0" VerticalOptions="Center" Source="formacion_1.jpg" Aspect="AspectFit" WidthRequest="96" />-->
+                                            <Label Grid.Row="0" Grid.Column="0" VerticalTextAlignment="Center" Text="{Binding indicador}" FontSize="Medium" TextColor="DarkGray" FontFamily="Lato"/>
+                                            <Label Grid.Row="0" Grid.Column="1" VerticalTextAlignment="Center" Text="{Binding descripcion}" FontSize="Medium" TextColor="#343434" FontFamily="Lato"/>
+                                        </Grid>
+
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+
+                    </StackLayout>
+
+                </xct:Expander>
+
+
+                <!-- Frame gestión de proyectos -->
+                
+                
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

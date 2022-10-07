@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "otFIIBECo4VcIJgI++uLONSsYxhWRraokiEfwHMEqTLBnUtxTLf9DKUsgZl1G2Nwf2EmEZ5H40pIt4CSFU9oaw==",
+  "dgSpecHash": "RXjuhNwB9h/qUdP0BWpsvxpOa88HFUIvniTcM72//8kaTwsyXC2KejzoeHMnnFdg/nMgpjMAB9SoDr3l14jDrQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\amorales\\source\\repos\\moralesneryxamarincv\\moralesneryxamarincv\\moralesneryxamarincv.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\amorales\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\amorales\\.nuget\\packages\\xamarin.communitytoolkit\\2.0.5\\xamarin.communitytoolkit.2.0.5.nupkg.sha512",
+    "C:\\Users\\amorales\\.nuget\\packages\\xamarin.essentials\\1.7.3\\xamarin.essentials.1.7.3.nupkg.sha512",
     "C:\\Users\\amorales\\.nuget\\packages\\xamarin.forms\\5.0.0.2515\\xamarin.forms.5.0.0.2515.nupkg.sha512"
   ],
   "logs": []

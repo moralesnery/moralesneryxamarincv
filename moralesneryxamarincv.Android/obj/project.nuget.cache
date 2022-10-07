@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "WVkYeEGoyHCb0Pmj815bG0dYJg1ST7tWLpOjttzW0BXyV91PC4cw3tW+/I/EXx6xeq6+DvW+/x1ODUikWXCX/g==",
+  "dgSpecHash": "AFwZ/hi9L+vubYJAwtdSnNHoaWnsupZO+X6tP0P+JCS/6qvYn5MCSQaX57TJvQNJ7bQOiitmF/34o7BEEbY1vQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\amorales\\source\\repos\\moralesneryxamarincv\\moralesneryxamarincv.Android\\moralesneryxamarincv.Android.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\amorales\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\amorales\\.nuget\\packages\\xamarin.androidx.activity\\1.2.4.1\\xamarin.androidx.activity.1.2.4.1.nupkg.sha512",
     "C:\\Users\\amorales\\.nuget\\packages\\xamarin.androidx.annotation\\1.2.0.1\\xamarin.androidx.annotation.1.2.0.1.nupkg.sha512",
     "C:\\Users\\amorales\\.nuget\\packages\\xamarin.androidx.annotation.experimental\\1.1.0.1\\xamarin.androidx.annotation.experimental.1.1.0.1.nupkg.sha512",
@@ -58,6 +59,7 @@
     "C:\\Users\\amorales\\.nuget\\packages\\xamarin.androidx.viewpager\\1.0.0.8\\xamarin.androidx.viewpager.1.0.0.8.nupkg.sha512",
     "C:\\Users\\amorales\\.nuget\\packages\\xamarin.androidx.viewpager2\\1.0.0.10\\xamarin.androidx.viewpager2.1.0.0.10.nupkg.sha512",
     "C:\\Users\\amorales\\.nuget\\packages\\xamarin.communitytoolkit\\2.0.5\\xamarin.communitytoolkit.2.0.5.nupkg.sha512",
+    "C:\\Users\\amorales\\.nuget\\packages\\xamarin.essentials\\1.7.3\\xamarin.essentials.1.7.3.nupkg.sha512",
     "C:\\Users\\amorales\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512",
     "C:\\Users\\amorales\\.nuget\\packages\\xamarin.google.android.material\\1.4.0.2\\xamarin.google.android.material.1.4.0.2.nupkg.sha512",
     "C:\\Users\\amorales\\.nuget\\packages\\xamarin.google.guava.listenablefuture\\1.0.0.2\\xamarin.google.guava.listenablefuture.1.0.0.2.nupkg.sha512"

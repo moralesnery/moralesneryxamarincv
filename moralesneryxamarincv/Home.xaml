@@ -4,9 +4,15 @@
              x:Class="moralesneryxamarincv.Home"
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
-        <StackLayout x:Name="container" Opacity="0">
-
-            <Grid Padding="20" VerticalOptions="CenterAndExpand">
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="End" Padding="20,10,20,0">
+                <Label Text="&#x1F32E;" FontSize="Medium"></Label>
+                <Switch x:Name="switchIdioma" OnColor="{StaticResource Primary}" ThumbColor="{StaticResource Primary}" BackgroundColor="LightGray" Toggled="switchIdioma_Toggled"></Switch>
+                <Label Text="&#x1F354;" FontSize="Medium"></Label>
+                
+            </StackLayout>
+            
+            <Grid Padding="20,10,20,20" VerticalOptions="CenterAndExpand">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"></ColumnDefinition>
                     <ColumnDefinition Width="*"></ColumnDefinition>
@@ -22,52 +28,52 @@
 
 
                 <Frame Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalOptions="CenterAndExpand" VerticalOptions="Start" CornerRadius="96" Padding="0" Margin="10" BorderColor="Transparent" BackgroundColor="Transparent">
-                    <Image Source="profilepicture.jpg" Aspect="AspectFit" WidthRequest="192"></Image>
+                    <Image Source="profilepicture.jpg" Aspect="AspectFit" WidthRequest="192" x:Name="foto" Opacity="0"></Image>
                 </Frame>
 
-                <Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" HorizontalTextAlignment="Center" FontSize="Title" Text="José Alberto Morales Nery" FontFamily="LatoBold"></Label>
-                <Label Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" HorizontalTextAlignment="Center" FontSize="Medium" Text="Desarrollador de Software" FontFamily="LatoBold"></Label>
+                <Label x:Name="lbl_name" Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" TextColor="Black" HorizontalTextAlignment="Center" FontSize="Title" Text="José Alberto Morales Nery" Opacity="0" FontFamily="LatoBold" ></Label>
+                <Label x:Name="lbl_studied" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2" TextColor="Black" HorizontalTextAlignment="Center" FontSize="Medium" Text="ISC - Desarrollador de Software" Opacity="0" FontFamily="LatoBold"></Label>
 
-                <BoxView Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="Black" HorizontalOptions="FillAndExpand" HeightRequest="1" Margin="10"></BoxView>
+                <BoxView Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="DarkGray" HorizontalOptions="FillAndExpand" HeightRequest="1" Margin="10"></BoxView>
                 
                 <!-- Menu -->
-                <Frame x:Name="btnCV" Grid.Row="4" Grid.Column="0" CornerRadius="5" BorderColor="{StaticResource Primary}" BackgroundColor="{StaticResource Primary}">
+                <Frame x:Name="btnCV" Grid.Row="4" Grid.Column="0" CornerRadius="5" BorderColor="{StaticResource Primary}" BackgroundColor="{StaticResource Primary}" Opacity="0">
                     <Frame.GestureRecognizers>
                         <TapGestureRecognizer Tapped="btnCV_Tapped"></TapGestureRecognizer>
                     </Frame.GestureRecognizers>
                     <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
                         <Image Aspect="AspectFit" Source="icon_white_cv.png" WidthRequest="42"></Image>
-                        <Label TextColor="White" FontFamily="Lato" FontAttributes="Bold" FontSize="Medium" HorizontalTextAlignment="Center" Text="Formación"></Label>                    
+                        <Label x:Name="lbl_cv" TextColor="White" FontFamily="Lato" FontAttributes="Bold" FontSize="Medium" HorizontalTextAlignment="Center" Text="Formación"></Label>                    
                     </StackLayout>
                 </Frame>
 
-                <Frame x:Name="btnTecnologías" Grid.Row="4" Grid.Column="1" CornerRadius="5" BorderColor="{StaticResource Primary}" BackgroundColor="{StaticResource Primary}">
+                <Frame x:Name="btnTecnologías" Grid.Row="4" Grid.Column="1" CornerRadius="5" BorderColor="{StaticResource Primary}" BackgroundColor="{StaticResource Primary}" Opacity="0">
                     <Frame.GestureRecognizers>
                         <TapGestureRecognizer Tapped="btnCV_Tapped"></TapGestureRecognizer>
                     </Frame.GestureRecognizers>
                     <StackLayout>
                         <Image Aspect="AspectFit" Source="icon_white_knowledge.png" WidthRequest="42"></Image>
-                        <Label TextColor="White" FontFamily="LatoBold" FontAttributes="Bold" FontSize="Medium" HorizontalTextAlignment="Center" Text="Tecnologías"></Label>
+                        <Label x:Name="lbl_knowledge" TextColor="White" FontFamily="LatoBold" FontAttributes="Bold" FontSize="Medium" HorizontalTextAlignment="Center" Text="Conocimientos"></Label>
                     </StackLayout>
                 </Frame>
 
-                <Frame x:Name="btnExperiencia" Grid.Row="5" Grid.Column="0" CornerRadius="5" BorderColor="{StaticResource Primary}" BackgroundColor="{StaticResource Primary}">
+                <Frame x:Name="btnExperiencia" Grid.Row="5" Grid.Column="0" CornerRadius="5" BorderColor="{StaticResource Primary}" BackgroundColor="{StaticResource Primary}" Opacity="0">
                     <Frame.GestureRecognizers>
                         <TapGestureRecognizer Tapped="btnCV_Tapped"></TapGestureRecognizer>
                     </Frame.GestureRecognizers>
                     <StackLayout>
                         <Image Aspect="AspectFit" Source="icon_white_experience.png" WidthRequest="42"></Image>
-                        <Label TextColor="White" FontFamily="LatoBold" FontAttributes="Bold" FontSize="Medium" HorizontalTextAlignment="Center" Text="Experiencia"></Label>
+                        <Label x:Name="lbl_experience" TextColor="White" FontFamily="LatoBold" FontAttributes="Bold" FontSize="Medium" HorizontalTextAlignment="Center" Text="Experiencia"></Label>
                     </StackLayout>
                 </Frame>
 
-                <Frame x:Name="btnContacto" Grid.Row="5" Grid.Column="1" CornerRadius="5" BorderColor="{StaticResource Primary}" BackgroundColor="{StaticResource Primary}">
+                <Frame x:Name="btnContacto" Grid.Row="5" Grid.Column="1" CornerRadius="5" BorderColor="{StaticResource Primary}" BackgroundColor="{StaticResource Primary}" Opacity="0">
                     <Frame.GestureRecognizers>
                         <TapGestureRecognizer Tapped="btnCV_Tapped"></TapGestureRecognizer>
                     </Frame.GestureRecognizers>
                     <StackLayout>
                         <Image Aspect="AspectFit" Source="icon_white_contact.png" WidthRequest="42"></Image>
-                        <Label TextColor="White" FontFamily="LatoBold" FontAttributes="Bold" FontSize="Medium" HorizontalTextAlignment="Center" Text="Contacto"></Label>
+                        <Label x:Name="lbl_contact" TextColor="White" FontFamily="LatoBold" FontAttributes="Bold" FontSize="Medium" HorizontalTextAlignment="Center" Text="Contacto"></Label>
                     </StackLayout>
                 </Frame>
 

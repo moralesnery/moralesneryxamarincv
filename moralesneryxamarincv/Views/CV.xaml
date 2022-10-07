@@ -3,40 +3,74 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              x:Class="moralesneryxamarincv.Views.CV"
-             NavigationPage.HasNavigationBar="False">
+             NavigationPage.HasNavigationBar="True" Title="Formación Profesional">
     <ContentPage.Content>
-        <StackLayout>
+        <ScrollView Padding="20">
+            <StackLayout>
 
-            <!--<xct:Expander>
-                <xct:Expander.Header>
-                    <Grid>
-                        <Label Text="Primer sección" FontAttributes="Bold" FontSize="Medium" />
-                        <Image Source="expand.png" HorizontalOptions="End" VerticalOptions="Start">
-                            <Image.Triggers>
-                                <DataTrigger TargetType="Image" Binding="{Binding Source={RelativeSource AncestorType={x:Type Expander}}, Path=IsExpanded}"
-                                 Value="True">
-                                    <Setter Property="Source"
-                                Value="collapse.png" />
-                                </DataTrigger>
-                            </Image.Triggers>
-                        </Image>
+                <xct:Expander Margin="0,10,0,10" x:Name="panel1">
+                    <xct:Expander.Header>
+                        <Label x:Name="lbl_hs" Text="Preparatoria" FontAttributes="Bold" FontSize="Large" TextColor="Black" FontFamily="LatoBold" />
+                    </xct:Expander.Header>
+
+                    <Grid Margin="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="128"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Image Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" VerticalOptions="Center" Source="formacion_1.jpg" Aspect="AspectFit" WidthRequest="96" />
+                        <Label x:Name="lbl_hs_name" Grid.Row="0" Grid.Column="1" Text="Colegio Nacional de Educación Profesional Técnica" FontSize="Medium" FontFamily="LatoBold"/>
+                        <Label x:Name="lbl_hs_grade" Grid.Row="1" Grid.Column="1" Text="Técnico Bachiller en Informática (2006-2009)" FontSize="Medium" FontFamily="Lato" />
                     </Grid>
-                </xct:Expander.Header>
-                <xct:Expander.ContentTemplate>
-                    <DataTemplate>
-                        <Grid Padding="10">
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="Auto" />
-                                <ColumnDefinition Width="Auto" />
-                            </Grid.ColumnDefinitions>
-                            <Image Source="{Binding ImageUrl}" Aspect="AspectFill" HeightRequest="120" WidthRequest="120" />
-                            <Label Grid.Column="1" Text="{Binding Details}" FontAttributes="Italic" />
-                        </Grid>
-                    </DataTemplate>
-                </xct:Expander.ContentTemplate>
-            </xct:Expander>-->
+                </xct:Expander>
 
+                <xct:Expander x:Name="panel2" Padding="0,15,0,0">
+                    <xct:Expander.Header>
+                        <Label x:Name="lbl_univ" Text="Estudios superiores" FontAttributes="Bold" FontSize="Large" TextColor="Black" FontFamily="LatoBold" />
+                    </xct:Expander.Header>
 
-        </StackLayout>
+                    <Grid Margin="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="128"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Image Grid.Row="0" Grid.Column="0" Grid.RowSpan="2" VerticalOptions="Center" Source="formacion_2.jpg" Aspect="AspectFit" WidthRequest="96" />
+                        <Label x:Name="lbl_univ_name" Grid.Row="0" Grid.Column="1" Text="Instituto Tecnológico de Veracruz" FontSize="Medium" FontFamily="LatoBold"/>
+                        <Label x:Name="lbl_univ_grade" Grid.Row="1" Grid.Column="1" Text="Ing. en Sistemas Computacionales (2009-2014)" FontSize="Medium" FontFamily="Lato" />
+                    </Grid>
+                </xct:Expander>
+
+                <BoxView BackgroundColor="LightGray" HeightRequest="1" Margin="0,15,0,10"></BoxView>
+            
+
+                <xct:Expander Margin="0,10,0,10" x:Name="panel3">
+                    <xct:Expander.Header>
+                        <Label x:Name="lbl_c" Text="Cursos y acreditaciones" FontAttributes="Bold" FontSize="Medium" TextColor="Black" FontFamily="LatoBold" />
+                    </xct:Expander.Header>
+
+                    <Grid Margin="5">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Grid.Row="0" Grid.Column="0" x:Name="lbl_c1" Text="• Facturación Electrónica CFDI 4.0" FontSize="Subtitle" FontFamily="Lato" />
+                        <Label Grid.Row="1" Grid.Column="0" x:Name="lbl_c2" Text="• Certificación MTA 98-349: SO Windows" FontSize="Subtitle" FontFamily="Lato" />
+                        <Label Grid.Row="2" Grid.Column="0" x:Name="lbl_c3" Text="• Introducción a la administración pública (LFRSP)" FontSize="Subtitle" FontFamily="Lato" />
+                        <Label Grid.Row="3" Grid.Column="0" x:Name="lbl_c4" Text="• Desarrollo movil multiplataforma" FontSize="Subtitle" FontFamily="Lato" />
+                    </Grid>
+                </xct:Expander>
+
+                <Label Text="⁌  ⁍" HorizontalTextAlignment="Center" VerticalTextAlignment="End"></Label>
+            
+
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
